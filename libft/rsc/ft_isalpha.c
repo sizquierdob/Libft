@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 19:25:43 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/05 20:03:57 by sizquier         ###   ########.fr       */
+/*   Created: 2022/03/28 14:03:50 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/19 16:51:49 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 
-void	ft_bzero(void *s, size_t	n)
+#include <stdio.h>
+#include<stdlib.h>
 
+int	ft_isalpha(int alpha)
 {
-	size_t	i;
-
-	while (*s != '\0' && i < n)
-		s++;
-	if (*s == '0')
-	{	
-		return ((char *)s);
+	if((alpha >='a' && alpha <='z')||(alpha >='A' && alpha <='Z'))
+	{
+		return (1);
 	}
-	return (0);
+	else	return (0);
 }
-}
-int main()
-
+/*int	main(void)
 {
-	char	data[] ="prueba bzero";
+	int		count;
+	count = 'A';
+	printf("el resultado es letra 1 o sino es 0 %d", ft_isalpha(count));
 	
-	printf("%s\n", data);
-	//printf("tras aplicar ft_bezero%s\n", ft_bzero(&data, 3);
-	return(0);
 }
+*/

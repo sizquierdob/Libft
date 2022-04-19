@@ -6,7 +6,7 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 13:48:16 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/03 14:12:16 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/19 18:21:52 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+/*
 int main()
 
 {
@@ -35,7 +36,7 @@ int main()
 	return(0);
 }
 
-/*
+
 void *memset ( void *s, int c, size_t n);
 
 La función memset copia el valor de c (convertido a un unsigned char) a cada uno de los primeros n caracteres en el objeto al cual señala s. 

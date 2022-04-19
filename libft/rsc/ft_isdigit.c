@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/03 15:27:25 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/03 15:28:50 by sizquier         ###   ########.fr       */
+/*   Created: 2022/03/30 17:23:38 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/19 17:54:45 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
-#include<stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_isdigit(int c)
 {
-	size_t	i;
-
-	if (!dst && !src)
-		return (0);
-	i = 0;
-	while (i < n)
+	if (c >= '0' && c <= '9')
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
+		return (1);
 	}
-	return (dst);
+	return (0);
 }
+
+/*int	main(void)
+{
+	int	number;
+
+	number = 6;
+	printf("el numero es digito resultado 1, sino 0 %d\n", ft_isdigit (number));
+}
+*/

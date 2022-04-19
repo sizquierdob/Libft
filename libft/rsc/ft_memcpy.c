@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 20:53:54 by sizquier          #+#    #+#             */
-/*   Updated: 2022/03/30 21:28:52 by sizquier         ###   ########.fr       */
+/*   Created: 2022/04/19 19:12:15 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/19 21:29:05 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<stdlib.h>
 
-int	ft_isprint(int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if (c >= 32 && c <= 126)
+	size_t	i;
+
+	if (!dst || !src)
+		return (NULL);
+	i = 0;
+	while (i < n)
 	{
-		return (1);
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		i++;
 	}
-	return (0);
-}
-
-int main()
-{
-	int	c;
-
-	printf("introduce un caracter");
-	scanf("%d", &c);
-	printf ("el caracter introducido es %c, y si es imprimible su valor es %c\n", c, ft_isprint(c));
-	return (0);
-
+	return (dst);
 }
