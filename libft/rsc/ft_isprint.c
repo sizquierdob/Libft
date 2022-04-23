@@ -6,12 +6,13 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 20:53:54 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/19 17:59:38 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/20 20:15:53 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<stdlib.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -28,7 +29,8 @@ int main()
 
 	printf("introduce un caracter");
 	scanf("%d", &c);
-	printf ("el caracter introducido es %c, y si es imprimible su valor es %c\n", c, ft_isprint(c));
+	printf ("el caracter introducido es %c, 
+	y si es imprimible su valor es %c\n", c, ft_isprint(c));
 	return (0);
 
 }

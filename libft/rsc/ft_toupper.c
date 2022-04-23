@@ -6,11 +6,12 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:05:06 by sizquier          #+#    #+#             */
-/*   Updated: 2022/03/31 19:38:27 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/20 20:16:47 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -24,7 +25,8 @@ int	ft_toupper(int c)
 /*int	main(void)
 {
 	int c = 'a';
-	printf("la conversión a minusculas es:%c\n", toupper(c)); // poner librería <ctype.h>
+	printf("la conversión a minusculas es:%c\n", toupper(c)); 
+	// poner librería <ctype.h>
 	printf("la conversión a minusculas es:%c\n", ft_toupper(c));
 	return (0);
 }

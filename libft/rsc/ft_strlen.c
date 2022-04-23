@@ -6,11 +6,12 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 17:00:42 by sizquier          #+#    #+#             */
-/*   Updated: 2022/03/31 17:56:34 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:36:44 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 

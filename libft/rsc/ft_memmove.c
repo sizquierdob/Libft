@@ -6,24 +6,22 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:30:05 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/19 21:34:40 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:37:37 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*temp_src;
 	unsigned char	*temp_dst;
 
 	if (!dst && !src)
 		return (NULL);
-
 	temp_src = (unsigned char *)src;
 	temp_dst = (unsigned char *)dst;
-
 	if (dst < src)
 		return (ft_memcpy(temp_dst, temp_src, len));
 	while (len--)
@@ -31,8 +29,6 @@ void	*memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 /*
-#include <stdio.h>
-#include <string.h>
 int	main(void)
 {
 	char	dst[10] = "";

@@ -6,13 +6,14 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 19:39:18 by sizquier          #+#    #+#             */
-/*   Updated: 2022/03/31 19:54:39 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:55:13 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
