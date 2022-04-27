@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 19:55:28 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/27 17:13:45 by sizquier         ###   ########.fr       */
+/*   Created: 2022/04/27 16:24:39 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/27 17:13:17 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<string.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	while (*s != '\0' && ((unsigned char)c) != *s)
-		s++;
-	if (*s == (unsigned char)c)
-		return ((char *)s);
-	return (NULL);
-}
+	char		*str;
+	size_t		size;
 
-/*
-int	main()
-{
-	
-	printf("se encuentra el valor?: %s|\n", strchr("", ' ' + 256));
-	printf("se encuentra el valor?: %s|\n", ft_strchr("", ' ' + 256));
-	return (0);
+	size = ft_strlen(s1);
+	str = (char *) ft_calloc(size + 1, 1);
+	if (str == NULL)
+		return (NULL);
+	return ((char *)ft_memmove(str, s1, size));
 }
-*/

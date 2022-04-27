@@ -6,7 +6,7 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 15:04:12 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/23 17:17:06 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:54:29 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,41 +30,42 @@
 */
 
 #include "libft.h"
-#include <stdlib.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	srcsize;
-	size_t	i;
-
-	if (!dst && !src)
-		return (0);
-	srcsize = ft_strlen(src);
-	i = 0;
-	if (dstsize != 0)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	if (dstsize > ft_strlen(src))
 	{
-		while (src[i] != '\0' && i < (dstsize - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		ft_bzero(dst, ft_strlen(src));
+		ft_memmove(dst, src, ft_strlen(src));
+		dst[ft_strlen(src)] = '\0';
 	}
-	return (srcsize);
+	else
+	{
+		ft_bzero(dst, dstsize);
+		ft_memmove(dst, src, dstsize);
+		dst[dstsize - 1] = '\0';
+	}
+	return (ft_strlen(src));
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 int	main(void)
 {
 	char	dst[15] = "aaaaaaaaaaaaaaa";
-	char	dst2[15] = "holamundoharta";
-	size_t result;
+	char	dst2[15] = "aaaaaaaaaaaaaaa";
+	char	src[] = "lorem ipsum dolor sit amet";
+	size_t		result;
 	result = 0;
-	result = strlcpy(dst2, dst, 0);
-	//printf("Original function: %zu	%s\n", dst, dst2);
+	result = strlcpy(dst2, src, 0);
+	printf("Original function: %zu	%s\n", result, dst2);
 	write(1, dst2, 15);
 	write(1, "\n", 1);
-	result = ft_strlcpy(dst, dst2, 0);
-	//printf("My function: %zu	%s\n", result, dst);
+	result = ft_strlcpy(dst, src, 0);
+	printf("My function: %zu	%s\n", result, dst);
 	write(1, dst, 15);
 	write(1, "\n", 1);
 	return (0);

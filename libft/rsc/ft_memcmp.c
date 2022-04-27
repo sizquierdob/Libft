@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 19:55:28 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/27 17:13:45 by sizquier         ###   ########.fr       */
+/*   Created: 2022/04/27 09:13:42 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/27 09:25:48 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<string.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s != '\0' && ((unsigned char)c) != *s)
-		s++;
-	if (*s == (unsigned char)c)
-		return ((char *)s);
-	return (NULL);
-}
-
 /*
-int	main()
+** LIBRARY: <string.h>
+** SYNOPSIS: compare byte string
+**
+** DESCRIPTION:
+** 		The memcmp() function compares byte string s1 against byte string s2.
+**	Both strings are assumed to be n bytes long.
+*/
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	
-	printf("se encuentra el valor?: %s|\n", strchr("", ' ' + 256));
-	printf("se encuentra el valor?: %s|\n", ft_strchr("", ' ' + 256));
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
+	}
 	return (0);
 }
-*/

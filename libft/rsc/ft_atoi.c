@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 19:55:28 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/27 17:13:45 by sizquier         ###   ########.fr       */
+/*   Created: 2022/04/27 11:35:40 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/27 14:55:33 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<string.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s != '\0' && ((unsigned char)c) != *s)
-		s++;
-	if (*s == (unsigned char)c)
-		return ((char *)s);
-	return (NULL);
-}
+int	ft_atoi(const char *str)
 
-/*
-int	main()
 {
-	
-	printf("se encuentra el valor?: %s|\n", strchr("", ' ' + 256));
-	printf("se encuentra el valor?: %s|\n", ft_strchr("", ' ' + 256));
-	return (0);
+	int		result;
+	size_t	sign;
+
+	result = 0;
+	sign = 1;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == 43 || *str == 45)
+	{
+		if (*str == 45)
+			sign = -1;
+		str++;
+	}
+	while (ft_isdigit(*str))
+		result = (*str++ - 48) + (result * 10);
+	return (result * sign);
 }
-*/
