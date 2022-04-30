@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/27 16:24:39 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/30 17:06:26 by sizquier         ###   ########.fr       */
+/*   Created: 2022/04/30 20:09:59 by sizquier          #+#    #+#             */
+/*   Updated: 2022/04/30 20:25:24 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char		*str;
-	size_t		size;
+	char	*dest;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	size = ft_strlen(s1);
-	str = (char *) ft_calloc(size + 1, sizeof(char));
-	if (str == NULL)
+	if (!s1 || !s2)
 		return (NULL);
-	return ((char *)ft_memmove(str, s1, size));
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	dest = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!dest)
+		return (NULL);
+	ft_strlcpy(dest, s1, s1_len + 1);
+	ft_strlcat(&dest[s1_len], s2, s2_len + 1);
+	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:06:48 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/27 16:29:58 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/30 21:07:09 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(const char *s1, char const *set);
+char			*ft_itoa(int n);
+char			**ft_split(const char *s, char c);
 #endif

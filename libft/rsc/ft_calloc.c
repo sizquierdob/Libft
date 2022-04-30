@@ -6,12 +6,12 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:01:31 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/27 16:03:10 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/04/30 20:50:19 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
