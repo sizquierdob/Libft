@@ -6,7 +6,7 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:06:48 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/30 21:07:09 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/05/03 18:30:02 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,11 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(const char *s1, char const *set);
 char			*ft_itoa(int n);
 char			**ft_split(const char *s, char c);
+char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 #endif
