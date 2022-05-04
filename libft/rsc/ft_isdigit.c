@@ -6,11 +6,10 @@
 /*   By: sizquier <sizquier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:23:38 by sizquier          #+#    #+#             */
-/*   Updated: 2022/04/20 20:08:02 by sizquier         ###   ########.fr       */
+/*   Updated: 2022/05/04 18:33:23 by sizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)
